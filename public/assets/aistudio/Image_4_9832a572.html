@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "error-container": "#93000a",
+          "surface-container-low": "#0d1724",
+          "surface-container-high": "#1b293d",
+          "on-primary-fixed": "#001c37",
+          "on-error": "#690005",
+          "surface-container": "#132133",
+          "on-surface-variant": "#a7b5c7",
+          "tertiary-fixed": "#e2e2e2",
+          "secondary-fixed": "#ffdad6",
+          "primary-container": "#005a9c",
+          "tertiary-container": "#203a5e",
+          "error": "#ffb4ab",
+          "background": "#0a111a",
+          "surface-tint": "#0077c8",
+          "inverse-on-surface": "#2a313c",
+          "surface-container-highest": "#24354c",
+          "outline": "#4a5d75",
+          "primary-fixed-dim": "#a1c9ff",
+          "surface-dim": "#0a111a",
+          "secondary-fixed-dim": "#ffb4ac",
+          "primary-fixed": "#d2e4ff",
+          "on-error-container": "#ffdad6",
+          "inverse-primary": "#1261a3",
+          "on-secondary-container": "#ffe2de",
+          "outline-variant": "#233347",
+          "tertiary-fixed-dim": "#c6c6c7",
+          "inverse-surface": "#dce3f1",
+          "surface-variant": "#1c2b3d",
+          "tertiary": "#85b6ff",
+          "on-tertiary-container": "#d2e4ff",
+          "on-background": "#e8eef6",
+          "on-secondary": "#ffffff",
+          "on-tertiary-fixed-variant": "#454747",
+          "on-tertiary": "#002b57",
+          "surface-container-lowest": "#060b12",
+          "on-primary-container": "#ffffff",
+          "on-secondary-fixed-variant": "#93000e",
+          "surface-bright": "#22354e",
+          "primary": "#3897f0",
+          "on-primary": "#ffffff",
+          "surface": "#0a111a",
+          "on-surface": "#f0f4f9",
+          "on-secondary-fixed": "#410003",
+          "secondary": "#e51a24",
+          "secondary-container": "#e51a24",
+          "on-tertiary-fixed": "#1a1c1c",
+          "on-primary-fixed-variant": "#00487f"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin": "2rem",
+          "gutter": "1.5rem",
+          "space-md": "1rem",
+          "space-xl": "2.5rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.5rem",
+          "gutter-mobile": "0.75rem",
+          "space-xs": "0.25rem",
+          "margin-mobile": "1rem"
+        },
+        "fontFamily": {
+          "headline-lg": ["Space Grotesk"],
+          "display-lg-mobile": ["Space Grotesk"],
+          "body-md": ["Inter"],
+          "label-md": ["Space Grotesk"],
+          "headline-lg-mobile": ["Space Grotesk"],
+          "headline-md": ["Space Grotesk"],
+          "body-sm": ["Inter"],
+          "body-lg": ["Inter"],
+          "display-lg": ["Space Grotesk"],
+          "label-lg": ["Space Grotesk"],
+          "label-sm": ["Space Grotesk"],
+          "headline-sm": ["Space Grotesk"],
+          "telemetry-mono": ["Inter"]
+        }
+      }
+    }
+  }
+</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-background text-on-surface font-body-md flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-[#0a111a]/90 backdrop-blur-xl pt-safe border-b border-surface-container-high/60 shadow-[0_4px_20px_rgba(0,0,0,0.5)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Mascote FD" class="h-9 w-9 object-contain rounded-md bg-white/5 p-0.5 border border-primary/30 flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMiC68uxUxglQcjJvFja3cKFF1ScuEPCujnVrQW78G3qFL8muRhC4ti-oRTok8s0qzTYG620gWxOav8goGiaem2mKDQcshPkh_RZCZMrWlMkWT6s69s2_-AyRTdNeVN60aqNj5RFycIsi3C_nrXqZx49jpxsY_sxYQ4bOT1HG6BRVJObzhg-vZ0lsrAC_RgFTZzuHVtQgXCZ0FWAhPqbQdzuXjTB39VF_rbwNu5C4uw0FdqI0UncD04uDkOLQVFXQAOA"/><div class="flex flex-col truncate"><div class="flex items-center gap-1.5"><span class="text-label-sm font-label-sm text-primary uppercase tracking-wider font-bold">FD Robotics</span><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span></div><h1 class="text-headline-sm font-headline-sm text-on-surface truncate leading-tight">Treinos</h1></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high border border-primary/20 text-primary"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="text-label-sm font-label-sm tracking-normal uppercase font-bold text-on-surface">FD Live</span></div><button class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface-variant hover:text-primary active:scale-95 transition-all border border-outline-variant/60" title="Sincronizar Planilha Excel"><span class="material-symbols-outlined text-[20px]">sync</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN5e5pe2aD7ZY06wJ4kQZrdNNBEUhYi19miec0sf33NHH39flHIeuqQJBNqKcp9Ho4mGd8mGGX6-dWinNjX0oNDCOstmmfQujuwqZwRADQibGKIPs32gZA5HYI72yMuMMML5cl6-IWRythQwJXUJrH-4769CsEpxKcTAexv1Ddyiz5zeG87x7_gsLaHqo-tK20EcIFU1bZhWQhejJL2Het5yqfC8v20qhxwW99JcE"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-background"><div class="flex flex-col w-full px-gutter-mobile py-space-md gap-space-lg">
+<!-- Welcome & Team Mascot Header Strip -->
+<section class="bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-low border border-primary/25 rounded-xl p-space-md flex flex-col gap-space-md shadow-lg relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-36 h-36 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute right-3 top-2 opacity-15 pointer-events-none">
+<img alt="FD Mascot Watermark" class="w-24 h-24 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMiC68uxUxglQcjJvFja3cKFF1ScuEPCujnVrQW78G3qFL8muRhC4ti-oRTok8s0qzTYG620gWxOav8goGiaem2mKDQcshPkh_RZCZMrWlMkWT6s69s2_-AyRTdNeVN60aqNj5RFycIsi3C_nrXqZx49jpxsY_sxYQ4bOT1HG6BRVJObzhg-vZ0lsrAC_RgFTZzuHVtQgXCZ0FWAhPqbQdzuXjTB39VF_rbwNu5C4uw0FdqI0UncD04uDkOLQVFXQAOA"/>
+</div>
+<div class="flex items-start justify-between gap-space-sm relative z-10">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative flex-shrink-0">
+<div class="w-12 h-12 rounded-xl bg-[#005a9c]/20 border border-primary/40 flex items-center justify-center p-1 shadow-inner">
+<img alt="Mascote FD" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMiC68uxUxglQcjJvFja3cKFF1ScuEPCujnVrQW78G3qFL8muRhC4ti-oRTok8s0qzTYG620gWxOav8goGiaem2mKDQcshPkh_RZCZMrWlMkWT6s69s2_-AyRTdNeVN60aqNj5RFycIsi3C_nrXqZx49jpxsY_sxYQ4bOT1HG6BRVJObzhg-vZ0lsrAC_RgFTZzuHVtQgXCZ0FWAhPqbQdzuXjTB39VF_rbwNu5C4uw0FdqI0UncD04uDkOLQVFXQAOA"/>
+</div>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 bg-secondary border-2 border-[#132133] rounded-full"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs mb-0.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Pit Telemetria FD</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate font-bold">Equipe FD Telemetry</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">smart_toy</span>
+      Mascote FD Online • SUBMERGED 24/25
+    </span>
+</div>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-highest border border-primary/30 text-on-surface font-label-md text-label-md active:scale-95 transition-all shadow-sm flex-shrink-0 hover:bg-surface-bright" id="exportExcelBtn" title="Exportar para Excel">
+<span class="material-symbols-outlined text-primary text-[18px]">table_view</span>
+<span>Exportar .xlsx</span>
+</button>
+</div>
+<!-- Quick Excel Status indicator -->
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/50 text-on-surface-variant font-label-sm text-label-sm relative z-10">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">cloud_done</span>
+        Autosync ativo (Planilha Oficial FD)
+      </span>
+<span class="font-telemetry-mono text-telemetry-mono text-primary font-bold bg-primary/10 px-2 py-0.5 rounded border border-primary/20">12 Rounds Hoje</span>
+</div>
+</section>
+<!-- Quick Action Triggers -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Execução no Tapete</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">sensors</span> FD Pit Sensors
+      </span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Primary Live Round CTA in FD Blue & Red -->
+<a class="group relative overflow-hidden bg-gradient-to-r from-[#005a9c] to-[#0077c8] border border-primary/40 text-white p-space-md rounded-xl flex items-center justify-between shadow-lg shadow-primary-container/20 active:scale-[0.98] transition-all" href="#">
+<div class="absolute -right-10 -bottom-10 w-28 h-28 bg-secondary/20 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center gap-space-md z-10">
+<div class="w-12 h-12 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-white text-[28px] animate-pulse">timer</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold tracking-tight text-white">Iniciar Round Ao Vivo</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary text-white font-label-sm text-label-sm uppercase font-bold tracking-wider shadow-sm">150s</span>
+</div>
+<p class="font-body-sm text-body-sm text-white/80 line-clamp-1">Visão Computacional FD + StopWatch Oficial</p>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-white/20 border border-white/30 flex items-center justify-center z-10 group-hover:scale-105 transition-transform shadow-md">
+<span class="material-symbols-outlined text-[22px] text-white">play_arrow</span>
+</div>
+</a>
+<!-- Secondary Video Upload CTA -->
+<button class="bg-surface-container-high border border-outline-variant/60 hover:bg-surface-bright text-on-surface p-space-md rounded-xl flex items-center justify-between shadow-sm active:scale-[0.98] transition-all text-left">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container border border-primary/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary text-[22px]">video_file</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">Upload &amp; Analisar Vídeo</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Diagnóstico post-run de saídas, drift e falhas</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px]">upload</span>
+</button>
+</div>
+</section>
+<!-- Featured Last Round Card (#42) with FD Assistant Mascot badge -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">flag_circle</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Último Round Gravado</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high border border-primary/30 text-primary font-telemetry-mono text-telemetry-mono font-bold">#42</span>
+</div>
+<div class="bg-surface-container border border-outline-variant/50 rounded-xl p-space-md flex flex-col gap-space-md shadow-md">
+<!-- Top Metrics: Score + Match Clock -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 mb-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Pontuação Conquistada</span>
+<span class="px-1.5 py-0.2 rounded bg-secondary/15 text-secondary border border-secondary/30 font-label-sm text-[10px] font-bold">FD TELEMETRY</span>
+</div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">385</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ 430 pts</span>
+</div>
+<div class="flex items-center gap-1 mt-0.5 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+15 pts que a média anterior</span>
+</div>
+</div>
+<!-- Radial Consistência Chart -->
+<div class="flex flex-col items-center">
+<div class="relative w-16 h-16 flex items-center justify-center">
+<svg class="w-16 h-16 -rotate-90" viewbox="0 0 36 36">
+<!-- Background Circle -->
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<!-- Progress Circle (89%) in Mascot Blue -->
+<path class="text-primary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="89, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface leading-none">89%</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 font-semibold">Consistência</span>
+</div>
+</div>
+<!-- Time and Margin Gauge -->
+<div class="bg-surface-container-low border border-outline-variant/40 rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-surface-container border border-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-primary">schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tempo de Mesa</span>
+<span class="font-telemetry-mono text-telemetry-mono font-bold text-on-surface">02:24 <span class="text-on-surface-variant font-normal">/ 02:30</span></span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary/15 text-secondary border border-secondary/30 font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Margem: 6.0s</span>
+</div>
+</div>
+<!-- Run Mini-Tracker (4 Saídas) -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-semibold">DESEMPENHO POR SAÍDA (RUNS)</span>
+<span class="text-primary font-bold">4 de 4 executadas</span>
+</div>
+<div class="grid grid-cols-4 gap-1.5">
+<!-- Run 1 -->
+<div class="bg-surface-container-high border border-outline-variant/40 rounded-lg p-2 flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Run 1</span>
+<span class="font-label-md text-label-md text-primary font-bold">100%</span>
+<div class="w-full h-1 bg-primary rounded-full mt-1"></div>
+</div>
+<!-- Run 2 -->
+<div class="bg-surface-container-high border border-outline-variant/40 rounded-lg p-2 flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Run 2</span>
+<span class="font-label-md text-label-md text-secondary font-bold">75%</span>
+<div class="w-full h-1 bg-surface-variant rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full w-[75%] rounded-full"></div>
+</div>
+</div>
+<!-- Run 3 -->
+<div class="bg-surface-container-high border border-outline-variant/40 rounded-lg p-2 flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Run 3</span>
+<span class="font-label-md text-label-md text-primary font-bold">100%</span>
+<div class="w-full h-1 bg-primary rounded-full mt-1"></div>
+</div>
+<!-- Run 4 -->
+<div class="bg-surface-container-high border border-outline-variant/40 rounded-lg p-2 flex flex-col items-center justify-center text-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Run 4</span>
+<span class="font-label-md text-label-md text-primary font-bold">90%</span>
+<div class="w-full h-1 bg-surface-variant rounded-full mt-1 overflow-hidden">
+<div class="bg-primary h-full w-[90%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Footer for Round -->
+<div class="flex items-center justify-between pt-1 border-t border-outline-variant/30">
+<button class="flex items-center gap-1.5 text-on-surface-variant hover:text-primary font-label-md text-label-md active:opacity-80 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-primary">play_circle</span>
+<span>Ver Gravação Câmera</span>
+</button>
+<button class="flex items-center gap-1 text-secondary hover:text-red-400 font-label-md text-label-md font-bold active:opacity-80 transition-colors">
+<span>Abrir Diagnóstico</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Key Team KPIs of the Day -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Métricas Chave de Hoje</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">tune</span> Sessão Ativa
+      </span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Metric 1: Average Points -->
+<div class="bg-surface-container border border-outline-variant/50 rounded-xl p-space-md flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-[#005a9c]/25 border border-primary/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">leaderboard</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Média de Pontos Hoje</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">362</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">pts</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-telemetry-mono text-telemetry-mono text-primary font-semibold">12 rounds</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Max: 410 pts</span>
+</div>
+</div>
+<!-- Metric 2: Mission with Highest Failure (Red Accent) -->
+<div class="bg-surface-container border border-outline-variant/50 rounded-xl p-space-md flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary/20 border border-secondary/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Missão com Maior Falha</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">M08 - Submarino de Pesquisa</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary/25 border border-secondary/40 text-secondary font-telemetry-mono text-telemetry-mono font-bold">58%</span>
+</div>
+<div class="w-full bg-surface-variant h-2 rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full rounded-full w-[58%]"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-0.5">
+<span>Falha mecânica: desengate do pino</span>
+<span class="text-secondary font-semibold">5 erros em 12</span>
+</div>
+</div>
+<!-- Metric 3: Base Attachment Swap Latency -->
+<div class="bg-surface-container border border-outline-variant/50 rounded-xl p-space-md flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-[#005a9c]/25 border border-primary/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Tempo de Troca de Anexo</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md font-bold text-secondary">8.4s</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">médio na Base</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">META OFICIAL</span>
+<span class="font-telemetry-mono text-telemetry-mono text-primary font-bold">&lt; 6.0s</span>
+</div>
+</div>
+<div class="w-full bg-surface-variant h-2 rounded-full overflow-hidden mt-1 relative">
+<!-- Ideal Target Marker (6s / 12s scale = 50%) -->
+<div class="absolute top-0 bottom-0 left-[50%] w-0.5 bg-primary z-10" title="Meta: 6s"></div>
+<!-- Actual Time Progress (8.4s / 12s scale = 70%) -->
+<div class="bg-secondary h-full rounded-full w-[70%]"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-0.5">
+<span class="text-secondary font-semibold">+2.4s acima do alvo</span>
+<span>Treinar Operador #2</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Practice History -->
+<section class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">history</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Histórico Recente</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline" href="#">Ver Todos (42)</a>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- History Card: Round #41 -->
+<div class="bg-surface-container border border-outline-variant/50 rounded-xl p-space-md flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high border border-primary/20 flex items-center justify-center font-telemetry-mono text-telemetry-mono font-bold text-primary">
+              #41
+            </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">365 pts</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-variant text-on-surface-variant font-label-sm text-label-sm">02:29</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hoje, às 16:42 • 4 saídas</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<!-- Video Badge -->
+<button class="w-8 h-8 rounded-lg bg-surface-container-high border border-outline-variant/60 text-primary flex items-center justify-center hover:bg-surface-bright" title="Assistir vídeo gravado">
+<span class="material-symbols-outlined text-[18px]">videocam</span>
+</button>
+<!-- Excel Sync Pill -->
+<div class="flex items-center gap-0.5 px-2 py-1 rounded bg-surface-container-high border border-primary/20 text-primary font-label-sm text-label-sm" title="Sincronizado no Excel">
+<span class="material-symbols-outlined text-[14px]">sync</span>
+<span class="font-bold">Sync</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/40 text-on-surface-variant font-label-sm text-label-sm">
+<span>Obs: Leve desvio no sensor de luz (Run 2)</span>
+<button class="text-primary font-label-sm text-label-sm font-semibold flex items-center gap-0.5 hover:underline">
+            Detalhes <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- History Card: Round #40 -->
+<div class="bg-surface-container border border-outline-variant/50 rounded-xl p-space-md flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high border border-secondary/30 flex items-center justify-center font-telemetry-mono text-telemetry-mono font-bold text-secondary">
+              #40
+            </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">410 pts</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 text-secondary border border-secondary/30 font-label-sm text-label-sm font-bold">Recorde Hoje</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hoje, às 15:18 • 02:22</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high border border-outline-variant/60 text-primary flex items-center justify-center hover:bg-surface-bright" title="Assistir vídeo gravado">
+<span class="material-symbols-outlined text-[18px]">videocam</span>
+</button>
+<div class="flex items-center gap-0.5 px-2 py-1 rounded bg-surface-container-high border border-primary/20 text-primary font-label-sm text-label-sm" title="Sincronizado no Excel">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span class="font-bold">Sync</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/40 text-on-surface-variant font-label-sm text-label-sm">
+<span>M08 concluída com 100% de sucesso</span>
+<button class="text-primary font-label-sm text-label-sm font-semibold flex items-center gap-0.5 hover:underline">
+            Detalhes <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- History Card: Round #39 -->
+<div class="bg-surface-container border border-outline-variant/50 rounded-xl p-space-md flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high border border-outline-variant flex items-center justify-center font-telemetry-mono text-telemetry-mono font-bold text-on-surface-variant">
+              #39
+            </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">290 pts</span>
+<span class="px-2 py-0.5 rounded bg-secondary/20 text-secondary border border-secondary/30 font-label-sm text-label-sm font-bold">Abortado (1m40s)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hoje, às 14:05 • Run 3 presa</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 rounded-lg bg-surface-container-high border border-outline-variant/60 text-primary flex items-center justify-center hover:bg-surface-bright" title="Assistir vídeo gravado">
+<span class="material-symbols-outlined text-[18px]">videocam</span>
+</button>
+<div class="flex items-center gap-0.5 px-2 py-1 rounded bg-surface-container-high border border-primary/20 text-primary font-label-sm text-label-sm" title="Sincronizado no Excel">
+<span class="material-symbols-outlined text-[14px]">check</span>
+<span class="font-bold">Sync</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/40 text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-secondary font-medium">Penalidade de precisão aplicada (-15)</span>
+<button class="text-primary font-label-sm text-label-sm font-semibold flex items-center gap-0.5 hover:underline">
+            Detalhes <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Excel / Cloud Telemetry Banner with FD Branding -->
+<section class="bg-gradient-to-r from-surface-container-low to-surface-container border border-primary/30 rounded-xl p-space-md flex items-start gap-space-md relative overflow-hidden shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-[#005a9c]/25 border border-primary/40 flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">cloud_sync</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Integração em Tempo Real • FD Cloud</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+        Todas as pontuações, tempos parciais por run e telemetria dos motores são salvos e sincronizados automaticamente na pasta oficial da equipe FD no OneDrive/Excel.
+      </p>
+<div class="flex items-center gap-2 mt-2">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1.5 font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+          Conexão Ativa: FD_Robotics_2025.xlsx
+        </span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Toast micro-interaction for Export action
+  const exportBtn = document.getElementById('exportExcelBtn');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', () => {
+      const originalText = exportBtn.innerHTML;
+      exportBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin text-primary">progress_activity</span><span>Gerando...</span>';
+      exportBtn.disabled = true;
+      
+      setTimeout(() => {
+        exportBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-primary">done</span><span>Exportado!</span>';
+        setTimeout(() => {
+          exportBtn.innerHTML = originalText;
+          exportBtn.disabled = false;
+        }, 2000);
+      }, 900);
+    });
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-[#0a111a]/95 backdrop-blur-xl border-t border-surface-container-high/60 shadow-[0_-4px_20px_rgba(0,0,0,0.6)]" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-16 px-gutter-mobile"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[48px] transition-colors text-primary font-label-md font-bold" data-path="treinos" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="text-label-sm font-label-sm">Treinos</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[48px] text-on-surface-variant hover:text-primary transition-colors" data-path="round-ao-vivo" href="#"><span class="material-symbols-outlined text-[24px]">videocam</span><span class="text-label-sm font-label-sm">Ao Vivo</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[48px] text-on-surface-variant hover:text-primary transition-colors" data-path="diagnostico" href="#"><span class="material-symbols-outlined text-[24px]">analytics</span><span class="text-label-sm font-label-sm">Diagnóstico</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[56px] min-h-[48px] text-on-surface-variant hover:text-primary transition-colors" data-path="estrategia" href="#"><span class="material-symbols-outlined text-[24px]">precision_manufacturing</span><span class="text-label-sm font-label-sm">Estratégia</span></a></div></nav></body></html>

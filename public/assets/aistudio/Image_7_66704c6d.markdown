@@ -1,0 +1,241 @@
+---
+name: Autonomous Kinetic System
+colors:
+  surface: '#0d141e'
+  surface-dim: '#0d141e'
+  surface-bright: '#333a45'
+  surface-container-lowest: '#080e18'
+  surface-container-low: '#151c26'
+  surface-container: '#19202a'
+  surface-container-high: '#232a35'
+  surface-container-highest: '#2e3540'
+  on-surface: '#dce3f1'
+  on-surface-variant: '#c1c7d2'
+  inverse-surface: '#dce3f1'
+  inverse-on-surface: '#2a313c'
+  outline: '#8b919b'
+  outline-variant: '#414750'
+  surface-tint: '#a1c9ff'
+  primary: '#a1c9ff'
+  on-primary: '#00325a'
+  primary-container: '#005a9c'
+  on-primary-container: '#afd1ff'
+  inverse-primary: '#1261a3'
+  secondary: '#ffb4ac'
+  on-secondary: '#690007'
+  secondary-container: '#d20019'
+  on-secondary-container: '#ffe2de'
+  tertiary: '#c6c6c7'
+  on-tertiary: '#2f3131'
+  tertiary-container: '#565858'
+  on-tertiary-container: '#cecece'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#d2e4ff'
+  primary-fixed-dim: '#a1c9ff'
+  on-primary-fixed: '#001c37'
+  on-primary-fixed-variant: '#00487f'
+  secondary-fixed: '#ffdad6'
+  secondary-fixed-dim: '#ffb4ac'
+  on-secondary-fixed: '#410003'
+  on-secondary-fixed-variant: '#93000e'
+  tertiary-fixed: '#e2e2e2'
+  tertiary-fixed-dim: '#c6c6c7'
+  on-tertiary-fixed: '#1a1c1c'
+  on-tertiary-fixed-variant: '#454747'
+  background: '#0d141e'
+  on-background: '#dce3f1'
+  surface-variant: '#2e3540'
+typography:
+  display-lg:
+    fontFamily: Space Grotesk
+    fontSize: 48px
+    fontWeight: '700'
+    lineHeight: 56px
+    letterSpacing: -0.02em
+  display-lg-mobile:
+    fontFamily: Space Grotesk
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: 40px
+    letterSpacing: -0.01em
+  headline-lg:
+    fontFamily: Space Grotesk
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.01em
+  headline-lg-mobile:
+    fontFamily: Space Grotesk
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: 0em
+  headline-md:
+    fontFamily: Space Grotesk
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: 0em
+  headline-sm:
+    fontFamily: Space Grotesk
+    fontSize: 20px
+    fontWeight: '500'
+    lineHeight: 28px
+    letterSpacing: 0em
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+    letterSpacing: 0em
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+    letterSpacing: 0.01em
+  body-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+    letterSpacing: 0.01em
+  label-lg:
+    fontFamily: Space Grotesk
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+    letterSpacing: 0.04em
+  label-md:
+    fontFamily: Space Grotesk
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.06em
+  label-sm:
+    fontFamily: Space Grotesk
+    fontSize: 10px
+    fontWeight: '700'
+    lineHeight: 14px
+    letterSpacing: 0.08em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 0.75rem
+  margin: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+This design system channels the precision, drive, and high-stakes intensity of competitive FIRST LEGO League (FLL) engineering. Rooted in the visual legacy of the team mascot—a mechanical cobalt guardian bearing competition-grade red insignia—the aesthetic merges technical mission-control telemetry with high-performance digital cockpits.
+
+The visual style blends **Corporate / Modern High-Tech** with subtle **Telemetry Brutalism**:
+- Deep petroleum navy foundations provide an immersive, focused operating canvas.
+- Crisp white technical overlays supply high-legibility telemetry and structural markers.
+- High-voltage competition crimson serves as a decisive action and urgency trigger, mirroring pit-lane dashboards and real-time match countdowns.
+- The interface feels rigorous, calculated, and robust—engineered for students, mentors, and judges analyzing telemetry, sensor calibration, and run scores under pressure.
+
+## Colors
+
+The dark-mode palette is anchored in industrial blue and intense competition red, balanced by high-contrast whites and multi-tiered obsidian-navy hulls.
+
+### Palette Architecture
+- **Primary (`#005a9c`)**: The structural chassis tone. Used for interactive states, key system containers, active tab indicators, and telemetry accents.
+- **Secondary (`#e51a24`)**: The competition drive accent. Reserved strictly for high-impact callouts, live match timers, mission-critical toggles, record scores, and alert statuses.
+- **Tertiary / Base Light (`#ffffff`)**: Pure optical white for high-priority numbers, vital vector readouts, and core primary typography against dark substrates.
+- **Neutral Core (`#09101a`)**: The deep vacuum base. Establishes an ultra-dark navy surface that eliminates glare in competition pits.
+
+### Surface System
+- **Canvas Base (`#09101a`)**: Background canvas for all primary screens and consoles.
+- **Chassis Level 1 (`#0f1a26`)**: Elevated panels, sidebar navigation, and module cards.
+- **Chassis Level 2 (`#162233`)**: Active card states, modal dialogues, input basins, and nested inspector units.
+- **Structural Border (`#22354c`)**: Muted structural gridlines, divider rules, and low-contrast perimeter strokes.
+
+## Typography
+
+Typography establishes an engineering cockpit atmosphere by coupling the angular, tech-forward cadence of **Space Grotesk** with the utilitarian precision of **Inter**.
+
+### Roles & Execution
+- **Display & Headlines (`Space Grotesk`)**: Render mission titles, telemetry readouts, scores, and primary metrics. Monospace-like numerical proportions provide immediate tabular clarity.
+- **Body & Continuous Copy (`Inter`)**: Deployed across code snippets, field logs, rule descriptions, and mission checklists to guarantee zero reading fatigue in ambient conditions.
+- **Telemetry Labels (`Space Grotesk`, All Caps)**: Sub-labels, metadata pins, and status flags use uppercase micro-typography with wide tracking (`0.04em` to `0.08em`) to mimic aerospace control hardware.
+
+## Layout & Spacing
+
+The layout is constructed on an 8px base rhythm that adapts to dashboard-dense grids and multi-sensor inspection feeds.
+
+### Grid Architecture
+- **Desktop (1200px+)**: 12-column fluid grid with `2rem` outer margins and `1.5rem` gutters. Optimized for dual-panel mission control: tactical scoring on the left, telemetry and code maps on the right.
+- **Tablet (768px - 1199px)**: 8-column layout with `1.5rem` margins and `1rem` gutters. Panels collapse into vertical stacked modules with persistent sticky control heads.
+- **Mobile (< 768px)**: 4-column layout with `1rem` margins and `0.75rem` gutters. Sensor blocks and action triggers stretch full-width for single-handed field operation.
+
+### Density Rules
+Padding within components scales from compact (`space-xs` and `space-sm`) for dense numerical counters and pin chips, up to expansive (`space-xl`) between distinct operational units on the arena board overview.
+
+## Elevation & Depth
+
+Visual hierarchy prioritizes crisp tactile modularity rather than exaggerated drop shadows. The system uses a disciplined **Tonal Layer + Technical Keyline** approach.
+
+### Tier Structure
+- **Level 0 (Floor)**: `#09101a` — The overall frame backdrop. No shadow.
+- **Level 1 (Panels & Cards)**: `#0f1a26` enclosed by a continuous 1px hairline stroke in `#22354c`. This creates an encapsulated "hardware module" boundary.
+- **Level 2 (Popovers & Modals)**: `#162233` with a subtle technical drop glow: `0 8px 24px rgba(0, 0, 0, 0.65)`, complemented by a 1px primary stroke (`#005a9c`) at 40% opacity.
+- **Level 3 (Tactical Overlays & Scrims)**: Semi-translucent `#09101a` at 85% opacity with a `12px` backdrop blur, keeping background field data visible yet non-distracting.
+
+### Accent Emittance
+Key indicators and primary buttons utilize an optical sub-glow (`box-shadow: 0 0 16px rgba(0, 90, 156, 0.4)` or secondary emergency `0 0 16px rgba(229, 26, 36, 0.45)`) to simulate illuminated hardware switches on competitive robotics arenas.
+
+## Shapes
+
+The design system adopts **Roundedness Level 2 (`0.5rem` / `8px`)** to reflect modern industrial robotics casing—robust, functional, and devoid of overly playful soft radii.
+
+### Scale Mapping
+- **Micro Radii (`rounded-sm` / `0.25rem`)**: Inner indicators, data badges, and terminal tags.
+- **Standard Radii (`rounded` / `0.5rem`)**: Primary buttons, input controls, metric widgets, and list items.
+- **Container Radii (`rounded-lg` / `1rem`)**: Mission boards, telemetry modules, and elevated modal chassis.
+- **Boundary Caps (`rounded-xl` / `1.5rem`)**: Structural dashboard shells and parent display cards.
+
+The mascot's clean, robotic geometry is echoed through geometric consistency: structural corners stay crisp and predictable, avoiding full pill shapes except for circular status beacons.
+
+## Components
+
+### Buttons
+- **Primary Action (Drive Blue)**: Solid `#005a9c` background with pure white typography (`#ffffff`, Space Grotesk Bold). Border radius `0.5rem`. Hover state introduces a luminance rise to `#0073c7` and an active box-shadow glow (`0 0 12px rgba(0, 90, 156, 0.5)`).
+- **Secondary Alert (Competition Red)**: Solid `#e51a24` background with pure white text for match start/stop, score finalization, and penalty warnings. Hover transitions to `#ff2a35`.
+- **Ghost / Outline**: Transparent fill with 1.5px border in `#22354c`, shifting to `#005a9c` on hover with text in `#ffffff`.
+
+### Chips & Status Indicators
+- **Autonomous Ready Chip**: Background `#0f1a26`, border `1px solid #22354c`, Space Grotesk `label-sm` text. Prefixed by a pulsing 6px circular dot (`#005a9c` or `#e51a24` depending on match status).
+- **Match Penalty Tag**: Solid crimson `#e51a24` fill, white bold mono-labeling, zero margin collapse.
+
+### Input Fields
+- **Data Basin**: `#0f1a26` background, `1px solid #22354c` border, `0.5rem` radius. Text rendered in `#ffffff` via Inter `body-md`. 
+- **Focus State**: Border shifts abruptly to `#005a9c` accompanied by a 2px outer keyline glow in `rgba(0, 90, 156, 0.25)`.
+- **Error / Fault State**: Border switches to `#e51a24` with contextual error micro-copy underneath in secondary red.
+
+### Checkboxes & Radios
+- Box size `20px x 20px`, `rounded-sm` (`4px`), border `1.5px solid #22354c`, background `#09101a`.
+- Checked state fills with `#005a9c` and presents an angular pure-white checkmark icon. Radio selections utilize an inner concentric circle of `#e51a24` when triggering competitive penalties.
+
+### Cards & Chassis Panels
+- **Telemetry Card**: Background `#0f1a26`, border `1px solid #22354c`, internal padding `space-lg`. Top edge features an optional 2px primary blue accent stripe to signal active motor or gyro telemetry streams.
+- **Match Scoreboard Card**: Employs deep `#162233` surface elevation with an explicit Space Grotesk display number in pure `#ffffff`, flanked by crimson `#e51a24` mission milestone pills.
+
+### Custom Component: Run Timer & Mission Matrix
+- **Dual-State Stopwatch**: Fixed-width tabular digits in Space Grotesk `display-lg`, flashing to secondary red `#e51a24` during the final 30 seconds of an FLL table run.
+- **Sensor Matrix Toggle**: Segmented toggle buttons housed within a unified `#09101a` track, providing haptic visual switching between Optical, Gyro, and Ultrasonic sensor logs.

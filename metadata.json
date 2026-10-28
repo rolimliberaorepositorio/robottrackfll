@@ -1,0 +1,6 @@
+{
+  "name": "FD Pit Telemetria & IA Diagnóstico FLL",
+  "description": "Aplicativo de telemetria em tempo real e diagnóstico inteligente para equipes de robótica FLL. Análise de 3 pilares (Consistência, Proximidade, Tempo), visão computacional e exportação Excel.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
